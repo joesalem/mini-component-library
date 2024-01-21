@@ -5,19 +5,23 @@
   "dependencies": {
     "babel-loader": "8.2.2",
     "babel-plugin-styled-components": "1.12.0",
+    "cross-env": "^7.0.3",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-feather": "2.0.9",
-    "react-scripts": "4.0.1",
+    "react-scripts": "^5.0.1",
     "styled-components": "5.2.1"
   },
   "scripts": {
-    "start": "start-storybook -p 6006 -s public"
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider start-storybook -p 6006 -s public",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:storybook/recommended"
     ]
   },
   "browserslist": {
@@ -35,11 +39,19 @@
   "devDependencies": {
     "@storybook/addon-actions": "6.5.15",
     "@storybook/addon-controls": "6.5.15",
-    "@storybook/addon-essentials": "6.5.15",
+    "@storybook/addon-essentials": "^7.6.9",
+    "@storybook/addon-interactions": "^7.6.9",
     "@storybook/addon-links": "6.5.15",
+    "@storybook/addon-onboarding": "^1.0.10",
+    "@storybook/blocks": "^7.6.9",
     "@storybook/node-logger": "6.5.15",
-    "@storybook/preset-create-react-app": "3.1.7",
-    "@storybook/react": "6.5.15",
-    "webpack": "4.44.2"
+    "@storybook/preset-create-react-app": "^7.6.9",
+    "@storybook/react": "^7.6.9",
+    "@storybook/react-webpack5": "^7.6.9",
+    "@storybook/test": "^7.6.9",
+    "eslint-plugin-storybook": "^0.6.15",
+    "prop-types": "^15.8.1",
+    "storybook": "^7.6.9",
+    "webpack": "^5.89.0"
   }
 }

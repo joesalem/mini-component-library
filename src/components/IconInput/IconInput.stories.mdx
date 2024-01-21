@@ -1,38 +1,38 @@
-import { Meta, Story } from '@storybook/addon-docs/blocks';
-import IconInput from './IconInput';
+import { Meta, Story } from "@storybook/addon-docs/blocks";
+import IconInput from "./IconInput";
 
 <Meta
-  title="IconInput"
-  component={IconInput}
-  argTypes={{
-    placeholder: {
-      control: {
-        type: 'text',
+   title="IconInput"
+   component={IconInput}
+   argTypes={{
+      placeholder: {
+         control: {
+            type: "text",
+         },
       },
-    },
-    icon: {
-      control: {
-        type: 'select',
-        options: ['search', 'at-sign'],
+      icon: {
+         control: {
+            type: "select",
+            options: ["search", "at-sign"],
+         },
       },
-    },
-    size: {
-      control: {
-        type: 'select',
-        options: ['small', 'large'],
+      size: {
+         control: {
+            type: "select",
+            options: ["small", "large"],
+         },
       },
-    },
-    label: {
-      control: {
-        type: 'text',
+      label: {
+         control: {
+            type: "text",
+         },
       },
-    },
-    width: {
-      control: {
-        type: 'number',
+      width: {
+         control: {
+            type: "number",
+         },
       },
-    },
-  }}
+   }}
 />
 
 export const Template = (args) => <IconInput {...args} />;
@@ -40,13 +40,13 @@ export const Template = (args) => <IconInput {...args} />;
 # IconInput
 
 <Story
-  name="Default"
-  args={{
-    placeholder: 'Search…',
-    label: 'Search',
-    icon: 'search',
-    size: 'small',
-  }}
+   name="Default"
+   args={{
+      placeholder: "Search…",
+      label: "Search",
+      icon: "search",
+      size: "large",
+   }}
 >
-  {Template.bind({})}
+   {Template.bind({})}
 </Story>
